@@ -1,11 +1,12 @@
 class Animacao {
-  constructor(colunas, imagem, x, largura, altura, larguraSprite, alturaSprite, totalFrames) {
+  constructor(colunas, imagem, x, variacaoY, largura, altura, larguraSprite, alturaSprite, totalFrames) {
     this.colunas = colunas;
     this.imagem = imagem;
     this.x = x;
-    this.y = height - altura;
-    this.largura = largura;
+    this.variacaoY = variacaoY;
     this.altura = altura;
+    this.y = height - this.altura - this.variacaoY;
+    this.largura = largura;
     this.larguraSprite = larguraSprite;
     this.alturaSprite = alturaSprite;
     this.frameAtual = 0;

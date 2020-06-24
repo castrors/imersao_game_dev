@@ -1,17 +1,18 @@
 class Personagem extends Animacao {
-  constructor(colunas, imagem, x, largura, altura, larguraSprite, alturaSprite, totalFrames) {
-    super(colunas, imagem, x, largura, altura, larguraSprite, alturaSprite, totalFrames);
-
-    this.yInicial = height - this.altura;
+  constructor(colunas, imagem, x, variacaoY, largura, altura, larguraSprite, alturaSprite, totalFrames) {
+    super(colunas, imagem, x, variacaoY, largura, altura, larguraSprite, alturaSprite, totalFrames);
+    this.variacaoY = variacaoY;
+    this.yInicial = height - this.altura - this.variacaoY;
     this.velocidadeDoPulo = 0;
-    this.gravidade = 3;
-    this.contadorDePulo = 0;
+    this.gravidade = 6;
+    this.pulos = 0;
+    this.alturaDoPulo = -50;
   }
 
   pula() {
-    if(this.contadorDePulo<2){
-      this.velocidadeDoPulo = -30;
-      this.contadorDePulo++;
+    if (this.pulos < 2) {
+      this.velocidadeDoPulo = this.alturaDoPulo;
+      this.pulos++;
     }
   }
 
@@ -21,20 +22,23 @@ class Personagem extends Animacao {
 
     if (this.y > this.yInicial) {
       this.y = this.yInicial;
-      this.contadorDePulo = 0;
+      this.pulos = 0;
     }
   }
 
   estaColidindo(inimigo) {
-    const precisao = 0.7;
-    const colisao = collideRectRect(this.x,
-      this.y,
-      this.largura * precisao,
-      this.altura * precisao,
-      inimigo.x,
-      inimigo.y,
-      inimigo.largura * precisao,
-      inimigo.altura * precisao
+    const precisaoCimaEsquerda = 0.2;
+    const precisaoBaixoDireita = 0.7;
+
+    const colisao = collideRectRect(
+      this.x + Math.round(this.largura * precisaoCimaEsquerda),
+      this.y + Math.round(this.altura * precisaoCimaEsquerda),
+      this.largura * precisaoBaixoDireita,
+      this.altura * precisaoBaixoDireita,
+      inimigo.x + Math.round(inimigo.largura * precisaoCimaEsquerda),
+      inimigo.y + Math.round(inimigo.altura * precisaoCimaEsquerda),
+      inimigo.largura * precisaoBaixoDireita,
+      inimigo.altura * precisaoBaixoDireita
     );
 
     return colisao;
