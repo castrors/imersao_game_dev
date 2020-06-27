@@ -36,19 +36,14 @@ class Personagem extends Animacao {
 
   estaColidindo(inimigo) {
     if (this.invencivel) return false;
-
-    const precisaoCimaEsquerda = 0.2;
-    const precisaoBaixoDireita = 0.7;
-
-    const colisao = collideRectRect(
-      this.x + Math.round(this.largura * precisaoCimaEsquerda),
-      this.y + Math.round(this.altura * precisaoCimaEsquerda),
-      this.largura * precisaoBaixoDireita,
-      this.altura * precisaoBaixoDireita,
-      inimigo.x + Math.round(inimigo.largura * precisaoCimaEsquerda),
-      inimigo.y + Math.round(inimigo.altura * precisaoCimaEsquerda),
-      inimigo.largura * precisaoBaixoDireita,
-      inimigo.altura * precisaoBaixoDireita
+    const precisao = 0.7;
+    const colisao = collideCircleCircle(
+      this.x + (this.largura/2),
+      this.y + (this.altura /2),
+      this.largura * precisao,
+      inimigo.x + (inimigo.largura/2),
+      inimigo.y + (inimigo.altura /2),
+      inimigo.largura * precisao
     );
 
     return colisao;

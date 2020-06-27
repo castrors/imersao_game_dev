@@ -1,7 +1,8 @@
 {
     "configuracoes": {
         "vidaMaxima": 5,
-        "vidaInicial": 5
+        "vidaInicial": 5,
+        "fimDoJogo": 100
     },
     "mapa": [
         {

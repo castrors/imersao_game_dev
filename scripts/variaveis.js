@@ -15,8 +15,10 @@ let fonteTelaInicial;
 let cenario;
 let somDoJogo;
 let somDoPulo;
+let somDaVitoria;
 let jogo;
 let telaInicial;
+let telaFinal;
 let botaoGerenciador;
 
 let personagem;

@@ -5,6 +5,7 @@ class Jogo {
     }
 
     setup() {
+    
         cenario = new Cenario(imagemCenario0, imagemCenario1, imagemCenario2, imagemCenario3, 3);
         pontuacao = new Pontuacao();
         vida = new Vida(fita.configuracoes.vidaMaxima, fita.configuracoes.vidaInicial);
@@ -15,6 +16,9 @@ class Jogo {
 
         inimigos.push(inimigoAndando);
         inimigos.push(inimigoCorrendo);
+
+        // sonDoJogo.stop();
+        somDoJogo.loop();
     }
 
     keyPressed(key) {

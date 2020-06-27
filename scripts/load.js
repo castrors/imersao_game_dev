@@ -9,6 +9,7 @@ function preload() {
     imagemInimigoAndando = loadImage('imagens/inimigos/walking-enemy.png');
     imagemInimigoCorrendo = loadImage('imagens/inimigos/running-enemy.png');
     imagemTelaInicial = loadImage('imagens/assets/airport.png');
+    imagemTelaFinal = loadImage('imagens/assets/fim.jpg');
     imagemVida = loadImage('imagens/assets/coracao.png')
     fonteTelaInicial = loadFont('imagens/assets/fonteTelaInicial.otf');
 
@@ -16,4 +17,5 @@ function preload() {
 
     somDoJogo = loadSound('sons/OvO.mp3');
     somDoPulo = loadSound('sons/somPulo.mp3');
+    somDaVitoria = loadSound('sons/Battle_Crowd_Celebration.mp3');
 }
