@@ -1,16 +1,19 @@
 function preload() {
-    imagemCenario = loadImage('imagens/cenario/floresta.png');
+    imagemCenario0 = loadImage('imagens/cenario/skill-desc_0000_foreground.png');
+    imagemCenario1 = loadImage('imagens/cenario/skill-desc_0001_buildings.png');
+    imagemCenario2 = loadImage('imagens/cenario/skill-desc_0002_far-buildings.png');
+    imagemCenario3 = loadImage('imagens/cenario/skill-desc_0003_bg.png');
+
     imagemGameOver = loadImage('imagens/assets/game-over.png');
-    imagemPersonagem = loadImage('imagens/personagem/correndo.png');
-    imagemInimigo = loadImage('imagens/inimigos/gotinha.png');
-    imagemInimigoGrande = loadImage('imagens/inimigos/troll.png');
-    imagemInimigoVoador = loadImage('imagens/inimigos/gotinha-voadora.png');
-    imagemTelaInicial = loadImage('imagens/assets/telaInicial.png');
+    imagemPersonagem = loadImage('imagens/personagem/bruna_run.png');
+    imagemInimigoAndando = loadImage('imagens/inimigos/walking-enemy.png');
+    imagemInimigoCorrendo = loadImage('imagens/inimigos/running-enemy.png');
+    imagemTelaInicial = loadImage('imagens/assets/airport.png');
     imagemVida = loadImage('imagens/assets/coracao.png')
     fonteTelaInicial = loadFont('imagens/assets/fonteTelaInicial.otf');
 
     fita = loadJSON('fita/fita.json');
 
-    somDoJogo = loadSound('sons/trilha_jogo.mp3');
+    somDoJogo = loadSound('sons/OvO.mp3');
     somDoPulo = loadSound('sons/somPulo.mp3');
 }

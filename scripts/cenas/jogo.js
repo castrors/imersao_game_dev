@@ -5,18 +5,16 @@ class Jogo {
     }
 
     setup() {
-        cenario = new Cenario(imagemCenario, 3);
+        cenario = new Cenario(imagemCenario0, imagemCenario1, imagemCenario2, imagemCenario3, 3);
         pontuacao = new Pontuacao();
         vida = new Vida(fita.configuracoes.vidaMaxima, fita.configuracoes.vidaInicial);
 
-        personagem = new Personagem(4, imagemPersonagem, 0, 30, 110, 135, 220, 270, 16);
-        const inimigo = new Inimigo(4, imagemInimigo, width - 52, 30, 52, 52, 104, 104, 28, 10,);
-        const inimigoGrande = new Inimigo(5, imagemInimigoGrande, width, 0, 200, 200, 400, 400, 28, 10);
-        const inimigoVoador = new Inimigo(3, imagemInimigoVoador, width - 52, 200, 100, 75, 200, 150, 16, 10);
+        personagem = new Personagem(4, imagemPersonagem, 10, -30, 240, 240, 240, 240, 14);
+        const inimigoAndando = new Inimigo(4, imagemInimigoAndando, width, 0, 213, 201, 71, 67, 16, 10);
+        const inimigoCorrendo = new Inimigo(3, imagemInimigoCorrendo, width, 0, 213, 201, 71, 67, 8, 10);
 
-        inimigos.push(inimigo);
-        inimigos.push(inimigoGrande);
-        inimigos.push(inimigoVoador);
+        inimigos.push(inimigoAndando);
+        inimigos.push(inimigoCorrendo);
     }
 
     keyPressed(key) {

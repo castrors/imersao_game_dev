@@ -1,4 +1,8 @@
-let imagemCenario;
+let imagemCenario0;
+let imagemCenario1;
+let imagemCenario2;
+let imagemCenario3;
+
 let imagemGameOver;
 let imagemPersonagem;
 let imagemInimigo;
