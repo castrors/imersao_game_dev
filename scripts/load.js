@@ -9,7 +9,7 @@ function preload() {
     imagemInimigoAndando = loadImage('imagens/inimigos/walking-enemy.png');
     imagemInimigoCorrendo = loadImage('imagens/inimigos/running-enemy.png');
     imagemTelaInicial = loadImage('imagens/assets/airport.png');
-    imagemTelaFinal = loadImage('imagens/assets/fim.jpg');
+    imagemTelaFinal = loadImage('imagens/assets/final.jpg');
     imagemVida = loadImage('imagens/assets/coracao.png')
     fonteTelaInicial = loadFont('imagens/assets/fonteTelaInicial.otf');
 

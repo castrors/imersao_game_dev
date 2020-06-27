@@ -16,9 +16,6 @@ class Jogo {
 
         inimigos.push(inimigoAndando);
         inimigos.push(inimigoCorrendo);
-
-        // sonDoJogo.stop();
-        somDoJogo.loop();
     }
 
     keyPressed(key) {
